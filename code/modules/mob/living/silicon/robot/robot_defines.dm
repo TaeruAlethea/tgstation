@@ -178,6 +178,7 @@
 /mob/living/silicon/robot/model/medical
 	set_model = /obj/item/robot_model/medical
 	icon_state = "medical"
+	var/vehicle_riding_offset = list(TEXT_NORTH = list(0), TEXT_SOUTH = list(0), TEXT_EAST = list(0), TEXT_WEST = list(0))
 
 // --------------------- Miner
 /mob/living/silicon/robot/model/miner
@@ -216,6 +217,7 @@
 	set_model = /obj/item/robot_model/syndicate
 	cell = /obj/item/stock_parts/cell/hyper
 	radio = /obj/item/radio/borg/syndicate
+	vehicle_riding_offset = set_riding_offsets(RIDING_OFFSET_ALL, list(TEXT_NORTH = list(0), TEXT_SOUTH = list(0), TEXT_EAST = list(0), TEXT_WEST = list(0)))
 
 /mob/living/silicon/robot/model/syndicate/proc/show_playstyle()
 	if(playstyle_string)
